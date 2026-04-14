@@ -1,25 +1,28 @@
+class CharacterPattern{
+  char character;
+  String[] pattern;
+  CharacterPattern(char character, String[] pattern){
+    this.character = character;
+    this.pattern = pattern;
+  }
+  public void printPattern(){
+    for(String line : pattern){
+      System.out.println(line);
+    }
+  }
+}
 public class OOPSBannerApp {
     public static void main(String[] args) {
-        printBanner();
-    }
-
-    // Method to return banner pattern
-    public static String[] getBanner() {
-        return new String[]{
-            " *****   *****   *****   ***** ",
-            "*     * *     * *     * *     *",
-            "*     * *     * *     * *     *",
-            "*     * *     * *****   ***** ",
-            "*     * *     * *       *     ",
-            "*     * *     * *       *     ",
-            " *****   *****   *       ***** "
-        };
-    }
-
-    // Method to print banner
-    public static void printBanner() {
-        for (String line : getBanner()) {
-            System.out.println(line);
-        }
+      String[] pattern = {
+        " ***** ",
+        "*     *",
+        "*     *",
+        "*     *",
+        "*     *",
+        "*     *",
+        " ***** "
+      };
+      CharacterPattern c = new CharacterPattern('O', pattern);
+      c.printPattern();
     }
 }
