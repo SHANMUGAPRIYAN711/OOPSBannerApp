@@ -1,7 +1,11 @@
 public class OOPSBannerApp {
-  public static void main(String[] args) {
-    //direct inline usage
-            for (String line : new String[]{
+    public static void main(String[] args) {
+        printBanner();
+    }
+
+    // Method to return banner pattern
+    public static String[] getBanner() {
+        return new String[]{
             " *****   *****   *****   ***** ",
             "*     * *     * *     * *     *",
             "*     * *     * *     * *     *",
@@ -9,8 +13,13 @@ public class OOPSBannerApp {
             "*     * *     * *       *     ",
             "*     * *     * *       *     ",
             " *****   *****   *       ***** "
-        }) {
+        };
+    }
+
+    // Method to print banner
+    public static void printBanner() {
+        for (String line : getBanner()) {
             System.out.println(line);
         }
-  }
+    }
 }
