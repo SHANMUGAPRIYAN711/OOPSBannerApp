@@ -1,6 +1,7 @@
 public class OOPSBannerApp {
   public static void main(String[] args) {
-            String[] banner = {
+    //direct inline usage
+            for (String line : new String[]{
             " *****   *****   *****   ***** ",
             "*     * *     * *     * *     *",
             "*     * *     * *     * *     *",
@@ -8,9 +9,8 @@ public class OOPSBannerApp {
             "*     * *     * *       *     ",
             "*     * *     * *       *     ",
             " *****   *****   *       ***** "
-        };
-        for(String line : banner){
-          System.out.println(line);
+        }) {
+            System.out.println(line);
         }
   }
 }
